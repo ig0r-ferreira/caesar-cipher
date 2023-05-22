@@ -28,7 +28,7 @@ packages = [
 ]
 
 [tool.taskipy.tasks]
-lint = "isort --check . && blue --check ."
+lint = "isort --check --diff . && blue --check --diff ."
 format = "isort . && blue ."
 test = "coverage run -m unittest discover"
 pre_test = "task lint"
