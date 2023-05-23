@@ -1,13 +1,14 @@
 [tool.poetry]
 name = "caesar-cipher"
 version = "0.1.0"
-description = "Caesar cipher encryption and decryption."
+description = "Caesar Cipher CLI."
 authors = ["Igor Ferreira <iferreira.n01@gmail.com>"]
 readme = "README.md"
 packages = [{include = "caesar_cipher"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+typer = {extras = ["all"], version = "^0.9.0"}
 
 
 [tool.poetry.group.dev.dependencies]
@@ -37,3 +38,6 @@ post_test = "coverage report -m && coverage html"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+caesar-cipher = 'caesar_cipher.cli:app'
