@@ -20,7 +20,7 @@ pipx install git+https://github.com/ig0r-ferreira/caesar-cipher.git
 ## How to use
 
 ```bash
-caesar-cipher --help
+caesar --help
 ```
 
 ## Author

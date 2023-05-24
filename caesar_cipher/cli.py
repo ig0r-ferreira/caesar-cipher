@@ -4,7 +4,7 @@ from typing import Optional
 import typer
 from typing_extensions import Annotated
 
-from . import decrypt, encrypt
+from . import decode, encode
 
 app = typer.Typer(
     name='Caesar Cipher',
@@ -40,5 +40,5 @@ def on_stdout(func):
     return wrapper
 
 
-app.command(no_args_is_help=True)(on_stdout(encrypt))
-app.command(no_args_is_help=True)(on_stdout(decrypt))
+app.command(no_args_is_help=True)(on_stdout(encode))
+app.command(no_args_is_help=True)(on_stdout(decode))

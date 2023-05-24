@@ -40,4 +40,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-caesar-cipher = 'caesar_cipher.cli:app'
+caesar = 'caesar_cipher.cli:app'

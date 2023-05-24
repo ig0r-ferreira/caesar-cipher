@@ -1,9 +1,9 @@
 from string import ascii_lowercase, ascii_uppercase
 
 
-def encrypt(text: str, shift: int) -> str:
-    """Encrypt a text."""
-    encrypted_text = ''
+def encode(text: str, shift: int) -> str:
+    """Encode a text according to the number of positions to be shifted."""
+    encoded_text = ''
     for character in text:
         character_shifted = character
 
@@ -14,11 +14,11 @@ def encrypt(text: str, shift: int) -> str:
             new_index = (index_character + shift) % 26
             character_shifted = alphabet[new_index]
 
-        encrypted_text += character_shifted
+        encoded_text += character_shifted
 
-    return encrypted_text
+    return encoded_text
 
 
-def decrypt(text: str, shift: int) -> str:
-    """Decrypt a text."""
-    return encrypt(text, shift * (-1))
+def decode(text: str, shift: int) -> str:
+    """Decode a text according to the number of positions to be shifted."""
+    return encode(text, shift * (-1))
