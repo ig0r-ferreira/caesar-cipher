@@ -9,9 +9,8 @@ from . import decode, encode
 app = typer.Typer(
     name='Caesar Cipher',
     no_args_is_help=True,
-    add_completion=False,
 )
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 def version(value: bool):
@@ -28,7 +27,7 @@ def callback(
             '--version', callback=version, help='Show the CLI app version.'
         ),
     ] = None
-):
+) -> None:  # pragma: no cover
     ...
 
 
